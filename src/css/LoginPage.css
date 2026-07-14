@@ -2,7 +2,7 @@
     background-color: #176E9B;
     font-family: Arial;
     background-image: url(../assets/background.png);
-    background-size: contain;
+    background-size: cover;
 }
 .login-box{
     background-color: #D6E7E7;

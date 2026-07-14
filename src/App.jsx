@@ -1,19 +1,15 @@
-import {LoginPage} from './pages/LoginPage'
-import './App.css'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { LoginPage } from './pages/LoginPage';
+import './App.css';
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LoginPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
-export default App
+export default App;

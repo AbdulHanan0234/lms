@@ -1,37 +1,10 @@
 import "../css/LoginPage.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 import kfueitlogo from "../assets/kfueit-Logo.png";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [captcha, setCaptcha] = useState("");
-  const [error, setError] = useState("");
-
-  const correctCaptcha = 4 + 7; // 11
-
-  const isFormValid =
-    username.trim() !== "" &&
-    password.trim() !== "" &&
-    Number(captcha) === correctCaptcha;
-
-  const handleLogin = () => {
-    setError("");
-    if (!username.trim() || !password.trim()) {
-      setError("Enter username and password.");
-      return;
-    }
-    if (Number(captcha) !== correctCaptcha) {
-      setError("Captcha answer is incorrect.");
-      return;
-    }
-
-    // Optionally: check credentials against API here
-    navigate("/home");
-  };
 
   return (
     <div className="login-page d-flex justify-content-center align-items-center vh-100">
@@ -45,40 +18,17 @@ export const LoginPage = () => {
         <div className="row text-center login-text">
           <p>Please enter username and password </p>
         </div>
-
         <div className="row justify-content-center user-pass ">
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+          <input type="text" placeholder="Username" />
         </div>
-
         <div className="row justify-content-center user-pass mt-3">
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="password" placeholder="Password" />
         </div>
 
         <div className="row  login-test mt-3">
           <p className="fs-5 col-7 text-center pt-2">4+7 = </p>
-          <input
-            type="number"
-            className="col-3"
-            value={captcha}
-            onChange={(e) => setCaptcha(e.target.value)}
-          />
+          <input type="number" className="col-3" />
         </div>
-
-        {error && (
-          <div className="row justify-content-center mt-2">
-            <small className="text-danger">{error}</small>
-          </div>
-        )}
 
         <div className="row text-center login-clue login-text fw-bold">
           <p>Example: If 2+2 = 4, then Write only 4 in the box</p>
@@ -86,14 +36,12 @@ export const LoginPage = () => {
         <div className="row  justify-content-center login-text login-btn  mb-2">
           <button
             className="btn rounded-1 text-white"
-            onClick={handleLogin}
-            disabled={!isFormValid}
+            onClick={() => navigate("/home")}
           >
             <i className="fa fa-sign-in pe-1" aria-hidden="true"></i>
             <span className="d-inline">Login</span>
           </button>
         </div>
-
         <div className="row text-center login-text bottom-text">
           <p>Reset Password</p>
         </div>

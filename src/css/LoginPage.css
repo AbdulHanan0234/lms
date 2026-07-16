@@ -45,6 +45,18 @@ font-size: 13px;
     background-color:  #338473;
     box-shadow: 3px 3px #338473;
 }
+
+/* keep color when disabled and override Bootstrap */
+.login-btn button:disabled,
+.login-btn button[disabled] {
+    background-color: #0DB14B !important;
+    border-color: #0DB14B !important;
+    color: white !important;
+    opacity: 1 !important;            /* prevent Bootstrap opacity change */
+    cursor: not-allowed;
+    pointer-events: none;             /* keep it non-interactive */
+}
+
 .bottom-text{
     color: #8B0000;
 }

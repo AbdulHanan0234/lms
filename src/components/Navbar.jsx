@@ -10,17 +10,37 @@ import d7 from "../assets/d7.png";
 import home from "../assets/home.png";
 import profile from "../assets/my_profile.png";
 
+import { HomePage } from "./../pages/HomePage";
+import { Downloads } from "./../pages/Downloads";
+import { Contact } from "./../pages/Contact";
+import { Manuals } from "./../pages/Manuals";
+import { Software } from "./../pages/Software";
+import { Timetable } from "./../pages/Timetable";
+import { MyProfile } from "./../pages/MyProfile";
 
-export const Navbar = () => {
+const WebsiteTab = () => (
+  <div className="p-3">
+    <iframe
+      src="https://www.kfueit.edu.pk/"
+      style={{ width: "100%", height: "80vh", border: "none" }}
+      title="Website"
+    />
+  </div>
+);
+
+const Navbar = ({ openTab }) => {
   return (
     <>
       <div className="container-fluid nav-row-1">
         <div className="row">
           <div className="col-1">
-            <button className="nav-menu text-white  mb-1  px-3 fw-medium ">
-              Menu
+            <button
+              type="button"
+              className="nav-menu text-white mb-1 px-3 fw-medium"
+            >
+              Menu{" "}
               <span>
-                <i class="bi bi-caret-down-fill ms-1"></i>
+                <i className="bi bi-caret-down-fill ms-1"></i>
               </span>
             </button>
           </div>
@@ -30,7 +50,7 @@ export const Navbar = () => {
               Welcome to MYKFUEIT Dashboard
             </marquee>
           </div>
-          <div className="col-3 fw-medium ">
+          <div className="col-3 fw-medium">
             Welcome Abdul Hanan, COSC241101065
           </div>
           <div className="col-2 fw-medium">
@@ -40,53 +60,94 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid nav-row-2 my-1 ">
+
+      <div className="container-fluid nav-row-2 my-1">
         <div className="row">
-          <div className="col-7 btn-row ps-0">
-            <button className="ms-0">
-              <img src={d1} alt="" className="img-fluid img-row-2" />
+          <div className="col btn-row ps-0">
+            <button
+              type="button"
+              onClick={() => openTab("email", "KFUEIT Email", HomePage)}
+            >
+              <img
+                src={d1}
+                alt="KFUEIT Email"
+                className="img-fluid img-row-2"
+              />
               <p>KFUEIT Email</p>
             </button>
-            <button onClick={() => window.open("https://www.kfueit.edu.pk/", "_blank")}>
-              <img src={d2} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("website", "Website", WebsiteTab)}
+            >
+              <img src={d2} alt="KFUEIT" className="img-fluid img-row-2" />
               <p>KFUEIT</p>
             </button>
-            <button>
-              <img src={d3} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("downloads", "Downloads", Downloads)}
+            >
+              <img src={d3} alt="Downloads" className="img-fluid img-row-2" />
               <p>DOWNLOAD</p>
             </button>
-            <button>
-              <img src={d4} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("contact", "Contact", Contact)}
+            >
+              <img src={d4} alt="Contact" className="img-fluid img-row-2" />
               <p>CONTACT</p>
             </button>
-            <button>
-              <img src={d5} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("manuals", "Manuals", Manuals)}
+            >
+              <img src={d5} alt="Manuals" className="img-fluid img-row-2" />
               <p>MANUALS</p>
             </button>
-            <button>
-              <img src={d6} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("software", "Software", Software)}
+            >
+              <img src={d6} alt="Software" className="img-fluid img-row-2" />
               <p>Software</p>
             </button>
-            <button>
-              <img src={d7} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("timetable", "Timetable", Timetable)}
+            >
+              <img src={d7} alt="Timetable" className="img-fluid img-row-2" />
               <p>Timetable</p>
             </button>
-            <button>
-              <img src={home} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("home", "Home", HomePage)}
+            >
+              <img src={home} alt="Home" className="img-fluid img-row-2" />
               <p>Home</p>
             </button>
-            <button>
-              <img src={profile} alt="" className="img-fluid img-row-2" />
+
+            <button
+              type="button"
+              onClick={() => openTab("profile", "My Profile", MyProfile)}
+            >
+              <img
+                src={profile}
+                alt="My Profile"
+                className="img-fluid img-row-2"
+              />
               <p>My Profile</p>
             </button>
           </div>
         </div>
       </div>
-      <div className="container-fluid nav-row-3">
-        <p className="bg-white fw-bold rounded-1">
-          Home <span className="fs-5 fw-lighter">x</span>
-        </p>
-      </div>
     </>
   );
 };
+
+export default Navbar;

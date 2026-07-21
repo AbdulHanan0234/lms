@@ -1,5 +1,5 @@
 import { LoginPage } from './pages/LoginPage';
-import { HomePage } from './pages/HomePage';
+import DashBoard from './components/DashBoard';
 import './App.css';
 import { HashRouter, Route, Routes } from "react-router-dom";
 
@@ -8,7 +8,7 @@ function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/home" element={<DashBoard />} />
       </Routes>
     </HashRouter>
   );

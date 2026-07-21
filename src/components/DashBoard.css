@@ -1,0 +1,27 @@
+/* .tab-container{
+    height: 900px;
+    width: max-content;
+
+} */
+.tab-bar{
+    background-color: #22B24C;
+    height: 27px;
+}
+.tab-button{
+    background-color: white;
+    color: #153980;
+    border: none;
+    font-size: 14px;
+    height: 22px;
+}
+.tab-button:hover{
+    color: black;
+}
+.nav-link.tab-button.active {
+    color: #153980 !important;
+    font-weight: bold;
+}
+.tab-button:not(.active){
+    background-color: #E6F0FF;
+    font-weight: normal;
+}

@@ -1,14 +1,11 @@
 import "../css/HomePage.css";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
 
 export const HomePage = () => {
   return (
     <div className="homepage">
-      <Navbar />
       <div className="container-fluid mid-container">
         <div className="row">
-          <div className="col-4">
+          <div className="col-4 col-sm-12">
             <div className="row">
               <h6 className="fs-3 text-center pt-4 ">
                 <i className="fa fa-bell-o pe-2" aria-hidden="true" />
@@ -16,9 +13,8 @@ export const HomePage = () => {
               </h6>
               <div className="news-panel  rounded-1"></div>
             </div>
-            <div className="row"></div>
           </div>
-          <div className="col-8">
+          <div className="col-8 col-sm-12">
             <div className="row heading">
               <h6 className="fs-3 text-center pt-4">
                 <i className="fa fa-graduation-cap" aria-hidden="true" />
@@ -74,7 +70,9 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
+
+export default HomePage;
+

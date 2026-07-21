@@ -56,18 +56,17 @@ const DashBoard = () => {
       </ul>
 
       {/* Tab Content - takes remaining space */}
-      <div className=" flex-grow-1 overflow-auto ">
-        {tabs.map((tab) => {
-          const Component = tab.component;
-          return (
-            <div
-              key={tab.id}
-              className={`tab-pane ${tab.id === activeTabId ? "active" : ""}`}
-            >
-              <Component />
-            </div>
-          );
-        })}
+      <div className="flex-grow-1 overflow-auto">
+        {tabs
+          .filter((tab) => tab.id === activeTabId)
+          .map((tab) => {
+            const Component = tab.component;
+            return (
+              <div key={tab.id} className="tab-pane active">
+                <Component />
+              </div>
+            );
+          })}
       </div>
         <Footer />
       </div>

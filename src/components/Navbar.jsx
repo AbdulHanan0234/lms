@@ -36,12 +36,11 @@ const Navbar = ({ openTab }) => {
           <div className="col-1">
             <button
               type="button"
-              className="nav-menu text-white mb-1 px-3 fw-medium"
+              className="nav-menu text-white mb-1 px-3 fw-medium d-inline-flex align-items-center"
+              style={{ whiteSpace: "nowrap" }}
             >
-              Menu{" "}
-              <span>
-                <i className="bi bi-caret-down-fill ms-1"></i>
-              </span>
+              <span>Menu</span>
+              <i className="bi bi-caret-down-fill ms-1"></i>
             </button>
           </div>
           <div className="col-1 fw-bold">My KFUEIT</div>

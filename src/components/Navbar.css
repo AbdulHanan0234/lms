@@ -2,7 +2,7 @@
     background-color: #153980;
     color: white;
     font-size: 14px;
-    height: 30px;
+    height: max-content;
     padding-top: 3px;
 }
 .nav-menu{

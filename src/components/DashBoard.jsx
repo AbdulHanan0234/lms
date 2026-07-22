@@ -56,7 +56,7 @@ const DashBoard = () => {
       </ul>
 
       {/* Tab Content - takes remaining space */}
-      <div className="flex-grow-1 overflow-auto">
+      <div className="flex-grow-1 overflow-auto tab-content">
         {tabs
           .filter((tab) => tab.id === activeTabId)
           .map((tab) => {

@@ -22,7 +22,7 @@ const WebsiteTab = () => (
   <div className="p-3">
     <iframe
       src="https://www.kfueit.edu.pk/"
-      style={{ width: "100%", height: "80vh", border: "none" }}
+      style={{ width: "100%", height: "1000px", border: "none" }}
       title="Website"
     />
   </div>
@@ -32,7 +32,7 @@ const Navbar = ({ openTab }) => {
   return (
     <>
       <div className="container-fluid nav-row-1">
-        <div className="row">
+        <div className="row flex-nowrap">
           <div className="col-1">
             <button
               type="button"
@@ -61,7 +61,7 @@ const Navbar = ({ openTab }) => {
       </div>
 
       <div className="container-fluid nav-row-2 my-1">
-        <div className="row">
+        <div className="row flex-nowrap">
           <div className="col btn-row ps-0">
             <button
               type="button"

@@ -25,7 +25,7 @@ export const Downloads = () => {
           </label>
           <input
             type="text"
-            className="rounded-0 border-black"
+            className="rounded-0 border-black border-1"
             placeholder="Search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}

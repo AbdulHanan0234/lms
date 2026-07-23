@@ -65,7 +65,13 @@ const Navbar = ({ openTab }) => {
           <div className="col btn-row ps-0">
             <button
               type="button"
-              onClick={() => openTab("email", "KFUEIT Email", HomePage)}
+              onClick={() =>
+                window.open(
+                  "https://theuselessweb.com/",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
+              }
             >
               <img
                 src={d1}

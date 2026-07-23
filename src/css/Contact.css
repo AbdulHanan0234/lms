@@ -1,0 +1,32 @@
+.pdf-btn{
+    border: none;
+    height: 30px;
+    background-color: #153980;
+    color: white;
+        font-family: 'Times New Roman', Times, serif;
+
+}
+.exel-btn{
+    border: none;
+    height: 30px;
+    background-color: #008B8B;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.t-color{
+    background-color: #22B24C !important;
+    color: white !important;
+
+}
+.download-btn{
+height: 30px;
+    background-color: #22B24C;
+    color: white;
+    transition: 1s;
+}
+.download-btn:hover{
+    background-color: #153980;
+    color: white;
+    transition: 1.5s;
+}
